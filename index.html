@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiSpy Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #8a2be2, #4169e1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 700px;
+            height: 300px;
+            margin-bottom: 40px;
+	    border-radius: 40px;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 16px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn.primary {
+            background: #ff3a45;
+            color: white;
+        }
+        
+        /* Abstract background shapes */
+        .shape {
+            position: absolute;
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+        
+        .shape1 {
+            width: 400px;
+            height: 400px;
+            background: #ff3a45;
+            top: -100px;
+            left: -100px;
+            animation: float 15s infinite alternate;
+        }
+        
+        .shape2 {
+            width: 300px;
+            height: 300px;
+            background: #42a5f5;
+            bottom: -80px;
+            right: -80px;
+            animation: float 20s infinite alternate-reverse;
+        }
+        
+        .shape3 {
+            width: 200px;
+            height: 200px;
+            background: #ffeb3b;
+            top: 20%;
+            right: 20%;
+            animation: pulse 10s infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(50px, 50px) rotate(10deg);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.4;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+        }
+        
+        /* Icon styling */
+        .icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
+        
+        /* Update background shapes to match AiSpy red */
+        .shape1 {
+            background: #ff3a45;
+        }
+    </style>
+</head>
+<body>
+    <!-- Abstract shapes for background -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    
+    <div class="container">
+        <!-- AiSpy Logo -->
+        <img src="D:\Projects\HackByte\cloudflare" alt="AiSpy Logo" class="logo" style="background-image: url('logo.png") />
+        
+        <div class="button-container">
+<a href="https://adorable-bunny-1ffc50.netlify.app/">
+        <button class="btn primary">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                </svg>
+                Chatbot
+            </button>
+    </a>
+            <a href="https://warm-buttercream-d6874a.netlify.app/demo/index.html/">
+
+            <button class="btn">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+                Camera
+            </button>
+    </a>
+
+        </div>
+    </div>
+</body>
+</html>
